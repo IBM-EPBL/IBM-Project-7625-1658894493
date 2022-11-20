@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body class='w-full h-full bg-no-repeat bg-cover' style="background-image: url('../static/img/img.png');">
+    <div class="flex text-black flex-row justify-between items-center px-6 py-6">
+        <a class="flex text-3xl justify-center items-center font-semibold" href="/">Personal Expense Tracker</a>
+        <div class="flex flex-row text-xl gap-5 font-semibold">
+            <button class="hover:text-blue-600"><a href="/">Login</a></button>
+            <button class="hover:text-blue-600"><a href="/signup">Signup</a></button>
+            <button class="hover:text-blue-600">About</button>
+        </div>
+    </div>
+    <div class="flex items-center justify-center">
+        <div class="px-12 py-9 mt-10 text-left bg-white shadow-lg w-4/12 rounded-lg">
+            <div class="flex justify-center items-center mb-2">
+                <p class="flex text-lg font-bold text-red-600">{{msg}}</p>
+            </div>
+            <h1 class="flex justify-center items-center text-2xl font-bold w-full">Signup for your account</h1>
+            <form action="/signup" method="POST">
+                <div class="mt-6">
+                    <label class="block">Username</label>
+                        <input type="text" placeholder="username" name="username" id="username" class="border px-2 py-2 mt-2 w-full rounded-md">
+                </div>
+                <div class="mt-4">
+                    <label class="block">Email</label>
+                        <input type="text" placeholder="Enter your email" class="border px-2 py-2 mt-2 w-full rounded-md" id="email" name="email">
+                </div>
+                <div class="mt-4">
+                    <label class="block">Password</label>
+                        <input type="password" placeholder="Enter your password" class="border px-2 py-2 mt-2 w-full rounded-md" id="password" name="password">
+                </div>
+                <div class="flex mt-6 justify-between items-center">
+                    <button type="submit" class="flex bg-blue-600 px-6 py-2 rounded-lg text-white w-full justify-center items-center">Signup</button>
+                </div>
+
+                <div class="relative flex py-5 items-center">
+                    <div class="flex-grow border-t border-gray-400"></div>
+                    <p class="text-center font-semibold mx-4 mb-0">OR</p>
+                    <div class="flex-grow border-t border-gray-400"></div>
+                </div>
+                <div class="flex flex-row gap-2 justify-center items-center">
+                    <p class="flex text-xl font-bold">Already have an account?</p>
+                    <a href="/" class="flex text-xl font-bold text-red-600">Login</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
